@@ -4,4 +4,4 @@ from flask import render_template
 @app.route('/news')
 
 def news():
-    return render_template('new1.html')
+    return render_template('new.html')

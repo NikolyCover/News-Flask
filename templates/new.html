@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='new.css')}}">
     <title>Por que os gatos olham para um ponto fixo?</title>
 </head>
 <body>
     <header>
-        <img class="home"src="../static/home.png">
+        <a href="/">
+            <img class="home"src="../static/home.png">
+        </a>
         <h1>Notícias Da hora</h1>
     </header>
     <article>
