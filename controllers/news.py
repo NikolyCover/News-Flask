@@ -5,3 +5,4 @@ from flask import render_template
 
 def news():
     return render_template('new.html')
+    
