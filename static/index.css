@@ -1,0 +1,28 @@
+.articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 90%;
+    margin: 10vh auto;
+    grid-gap: 4vw;
+}
+
+.article-preview {
+}
+
+.article-preview .banner {
+    max-width: 100%;
+    display: block;
+}
+
+.article-preview .title {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.article-preview .description {
+    font-size: .8em;
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+    margin-top: 8px;
+}

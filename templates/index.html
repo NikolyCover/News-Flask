@@ -4,23 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}">    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css')}}">    
     <title>Notícias da Hora</title>
 </head>
 <body>
     <header>
-        <img class="home"src="../static/home.png">
-        <h1>Notícias Da hora</h1>
+        <a href="/">
+            <img class="home"src="../static/home.png">
+        </a>
+        <nav>
+            <ul class="menu">
+                <li><a href="/business">business</a></li>
+                <li><a href="/entertainment">entertainment</a></li>
+                <li><a href="/health">health</a></li>
+                <li><a href="/science">science</a></li>
+                <li><a href="/sports">sports</a></li>
+                <li><a href="/technology">technology</a></li>
+            </ul>
+        </nav>
     </header>
     
-    <section class="news">
+    <section class="articles">
         {% for new in news %}
 
-            <div>
-                <img class="banner" src="{{ new.urlToImage}}">
-                <h1>{{new.title}}</h1>
-                <p>{{new.description}}</p>
-                
+            <div class="article-preview">
+                <a>
+                    <img class="banner" src="{{ new.urlToImage}}">
+                    <div class="text">
+                        <h1 class="title">{{new.title}}</h1>
+                        <p class="description">{{new.description}}</p>
+                    </div>
+                </a>
             </div>
 
         {% endfor %}

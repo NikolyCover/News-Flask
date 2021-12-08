@@ -4,7 +4,7 @@ from newsapi import NewsApiClient
 
 newsapi = NewsApiClient(api_key='3511b9c9f1df496da3a30ca5009c0181')
 
-news = newsapi.get_top_headlines(language='pt', country='br', category='entertainment')
+news = newsapi.get_top_headlines(language='pt', country='br', category='general')
 news = news['articles']
 
 @app.route('/')
