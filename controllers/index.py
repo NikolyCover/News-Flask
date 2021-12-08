@@ -4,10 +4,16 @@ from newsapi import NewsApiClient
 
 newsapi = NewsApiClient(api_key='3511b9c9f1df496da3a30ca5009c0181')
 
-news = newsapi.get_top_headlines(language='pt', country='br', category='general')
-news = news['articles']
-
 @app.route('/')
-def index():
+def general():
+    articles = newsapi.get_top_headlines(language='pt', country='br', category='general')
+    articles = articles['articles']
 
-    return render_template('index.html', news = news)
+    return render_template('index.html', articles = articles)
+
+@app.route('/<category>')
+def business(category):
+    articles = newsapi.get_top_headlines(language='pt', country='br', category=category)
+    articles = articles['articles']
+
+    return render_template('index.html', articles = articles)

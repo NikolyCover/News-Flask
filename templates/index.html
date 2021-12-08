@@ -26,14 +26,14 @@
     </header>
     
     <section class="articles">
-        {% for new in news %}
+        {% for article in articles %}
 
             <div class="article-preview">
-                <a>
-                    <img class="banner" src="{{ new.urlToImage}}">
+                <a href="{{article.url}}">
+                    <img class="banner" src="{{article.urlToImage}}">
                     <div class="text">
-                        <h1 class="title">{{new.title}}</h1>
-                        <p class="description">{{new.description}}</p>
+                        <h1 class="title">{{article.title}}</h1>
+                        <p class="description">{{article.description}}</p>
                     </div>
                 </a>
             </div>
