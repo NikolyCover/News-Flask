@@ -14,11 +14,16 @@
     </header>
     
     <section class="news">
-        <div>
-            <img class="banner" src="">
-            <h1>Title</h1>
-            
-        </div>
+        {% for new in news %}
+
+            <div>
+                <img class="banner" src="{{ new.urlToImage}}">
+                <h1>{{new.title}}</h1>
+                <p>{{new.description}}</p>
+                
+            </div>
+
+        {% endfor %}
     </section>
 
     <footer>
