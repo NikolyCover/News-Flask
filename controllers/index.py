@@ -1,6 +1,9 @@
 #from __main__ import app
-def dostuff(self):
-     from __main__ import app
+try:
+    from __main__ import app
+except ImportError:
+    import sys
+    app = sys.modules[__package__ + '.app']
 
 from flask import render_template
 from newsapi import NewsApiClient
